@@ -4,6 +4,11 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Para Rakesh — Data Science & AI/ML Engineer',
   description: 'Cinematic portfolio of Para Rakesh — AI/ML Engineer, Data Scientist, IIT Bombay Research Intern.',
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
