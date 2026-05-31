@@ -1,0 +1,220 @@
+.certSection {
+  position: relative;
+  background: var(--bg-primary);
+  padding: 8rem clamp(1.5rem, 6vw, 7rem);
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+}
+
+.header {
+  max-width: 1400px;
+  margin: 0 auto 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.tagline {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-orange);
+  margin: 0 0 1rem;
+}
+
+.heading {
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  line-height: 1.1;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-weight: 900;
+  text-shadow: 0 0 45px rgba(255, 255, 255, 0.05);
+}
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Card */
+.card {
+  width: 100%;
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: clamp(1.6rem, 3vw, 2.5rem);
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 140, 66, 0.25);
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.5),
+    0 0 25px rgba(255, 140, 66, 0.02);
+}
+
+/* Header inside Card */
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 1.6rem;
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1.6rem;
+}
+
+.titleGroup {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.iconWrapper {
+  background: rgba(255, 140, 66, 0.05);
+  border: 1px solid rgba(255, 140, 66, 0.15);
+  border-radius: 6px;
+  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.awardIcon {
+  width: 20px;
+  height: 20px;
+  color: var(--accent-orange);
+  filter: drop-shadow(0 0 5px rgba(255, 140, 66, 0.3));
+}
+
+.degree {
+  font-family: var(--font-mono);
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.4rem;
+  line-height: 1.3;
+}
+
+.school {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.period {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  letter-spacing: 0.08em;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  white-space: nowrap;
+}
+
+/* Card Body */
+.cardBody {
+  width: 100%;
+}
+
+.description {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin: 0 0 2rem;
+}
+
+/* Curriculum Section */
+.curriculumSection {
+  margin-top: 1.5rem;
+}
+
+.curriculumTitle {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin: 0 0 1rem;
+}
+
+.curriculumGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 2rem;
+}
+
+.gridColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bulletItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.checkIcon {
+  width: 14px;
+  height: 14px;
+  color: var(--accent-orange);
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 3px rgba(255, 140, 66, 0.4));
+}
+
+.bulletText {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .cardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .period {
+    align-self: flex-start;
+  }
+
+  .curriculumGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .certSection {
+    padding: 6rem 1.5rem;
+  }
+
+  .card {
+    padding: 1.6rem 1.2rem;
+  }
+}

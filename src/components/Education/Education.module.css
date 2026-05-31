@@ -1,0 +1,264 @@
+.educationSection {
+  position: relative;
+  background: var(--bg-secondary);
+  padding: 8rem clamp(1.5rem, 6vw, 7rem);
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+}
+
+.header {
+  max-width: 1400px;
+  margin: 0 auto 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.tagline {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-orange);
+  margin: 0 0 1rem;
+}
+
+.heading {
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  line-height: 1.1;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-weight: 900;
+  text-shadow: 0 0 45px rgba(255, 255, 255, 0.05);
+}
+
+.headingAccent {
+  color: var(--accent-orange);
+  text-shadow: 0 0 45px rgba(255, 140, 66, 0.25);
+}
+
+/* Timeline Layout */
+.listContainer {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+}
+
+/* Left Vertical Track */
+.trackLine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 30px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(-50%);
+}
+
+.item {
+  position: relative;
+  width: 100%;
+  margin-bottom: 3.5rem;
+  display: flex;
+  align-items: flex-start;
+  padding-left: 70px;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+/* Card */
+.card {
+  width: 100%;
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: clamp(1.6rem, 3vw, 2.5rem);
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 140, 66, 0.25);
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.5),
+    0 0 25px rgba(255, 140, 66, 0.02);
+}
+
+/* Header inside Card */
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 1.6rem;
+  width: 100%;
+}
+
+.titleGroup {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.iconWrapper {
+  background: rgba(255, 140, 66, 0.05);
+  border: 1px solid rgba(255, 140, 66, 0.15);
+  border-radius: 6px;
+  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.eduIcon {
+  width: 20px;
+  height: 20px;
+  color: var(--accent-orange);
+  filter: drop-shadow(0 0 5px rgba(255, 140, 66, 0.3));
+}
+
+.degree {
+  font-family: var(--font-mono);
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.4rem;
+  line-height: 1.3;
+}
+
+.school {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--accent-orange);
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.period {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  letter-spacing: 0.08em;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  white-space: nowrap;
+}
+
+/* Card Body */
+.cardBody {
+  width: 100%;
+}
+
+.description {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Timeline Markers */
+.node {
+  position: absolute;
+  left: 30px;
+  top: clamp(2.5rem, 4vw, 3.5rem);
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 2px solid var(--accent-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px var(--accent-orange);
+}
+
+.nodeDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent-orange);
+  box-shadow: 0 0 6px var(--accent-orange);
+}
+
+.bulletsList {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.bulletItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.bulletDot {
+  color: var(--accent-orange);
+  font-size: 1.1rem;
+  line-height: 1;
+  margin-top: -0.1rem;
+}
+
+.bulletText {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .trackLine {
+    left: 20px;
+  }
+
+  .node {
+    left: 20px;
+  }
+
+  .item {
+    padding-left: 50px;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .period {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .educationSection {
+    padding: 6rem 1.5rem;
+  }
+
+  .card {
+    padding: 1.6rem 1.2rem;
+  }
+}

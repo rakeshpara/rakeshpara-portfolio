@@ -1,0 +1,274 @@
+.skills {
+  position: relative;
+  background: var(--bg-secondary);
+  padding: 8rem clamp(1.5rem, 6vw, 7rem);
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+}
+
+.header {
+  max-width: 1400px;
+  margin: 0 auto 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.tagline {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-orange);
+  margin: 0 0 1rem;
+}
+
+.heading {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  color: var(--text-primary);
+  text-shadow: 0 0 40px rgba(255, 140, 66, 0.08);
+}
+
+/* Two-column layout */
+.gridContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.desktopLayout {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 5rem;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* ── LEFT COLUMN (TABS) ── */
+.tabsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.tabBtn {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  background: rgba(13, 13, 13, 0.35);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.2rem 1.6rem;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.tabBtn:hover {
+  background: rgba(255, 140, 66, 0.04);
+  border-color: rgba(255, 140, 66, 0.25);
+  color: var(--text-primary);
+}
+
+.tabActive {
+  background: rgba(255, 140, 66, 0.08) !important;
+  border-color: var(--accent-orange) !important;
+  color: var(--text-primary) !important;
+  box-shadow: 0 0 20px rgba(255, 140, 66, 0.05);
+}
+
+.tabDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.tabActive .tabDot {
+  background: var(--accent-orange);
+  box-shadow: 0 0 10px var(--accent-orange);
+}
+
+/* ── RIGHT COLUMN (SKILLS VISUALIZER) ── */
+.skillsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 1.25rem;
+  background: rgba(13, 13, 13, 0.25);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
+}
+
+.skillCard {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: default;
+}
+
+.skillCard:hover {
+  background: rgba(255, 140, 66, 0.03);
+  border-color: rgba(255, 140, 66, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 20px rgba(0, 0, 0, 0.4),
+    0 0 15px rgba(255, 140, 66, 0.02);
+}
+
+.skillName {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.04em;
+}
+
+.skillIcon {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-orange);
+  box-shadow: 0 0 8px var(--accent-orange);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.skillCard:hover .skillIcon {
+  transform: scale(1.3);
+  box-shadow: 0 0 12px var(--accent-orange);
+}
+
+/* Accordion Container for Mobile / Tablets */
+.accordionContainer {
+  display: none; /* Hidden on desktop */
+  width: 100%;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.accordionGroup {
+  width: 100%;
+  background: rgba(13, 13, 13, 0.25);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.accordionHeader {
+  width: 100%;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  padding: 1.2rem 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.accordionHeader:hover {
+  background: rgba(255, 140, 66, 0.04);
+  color: var(--text-primary);
+}
+
+.accordionHeaderActive {
+  background: rgba(255, 140, 66, 0.06);
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border);
+}
+
+.accordionTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.tabDotActive {
+  background: var(--accent-orange) !important;
+  box-shadow: 0 0 10px var(--accent-orange) !important;
+}
+
+.accordionArrow {
+  display: block;
+  width: 16px;
+  height: 16px;
+  color: var(--text-muted);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.3s;
+}
+
+.accordionHeader:hover .accordionArrow,
+.accordionHeaderActive .accordionArrow {
+  color: var(--accent-orange);
+}
+
+.arrowOpen {
+  transform: rotate(180deg);
+}
+
+/* Smooth Accordion Height Expansion */
+.accordionContent {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease-out;
+}
+
+.contentOpen {
+  max-height: 600px;
+  opacity: 1;
+}
+
+.accordionGrid {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.85rem;
+  padding: 1.4rem 1.2rem;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .desktopLayout {
+    display: none; /* Hide two-column view */
+  }
+
+  .accordionContainer {
+    display: flex; /* Show vertical accordion list */
+  }
+}
+
+@media (max-width: 640px) {
+  .skills {
+    padding: 6rem 1.5rem;
+  }
+
+  .accordionGrid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    padding: 1.2rem 0.9rem;
+    gap: 0.75rem;
+  }
+
+  .skillCard {
+    padding: 0.85rem 1rem;
+  }
+}

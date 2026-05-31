@@ -1,0 +1,235 @@
+.timelineSection {
+  position: relative;
+  background: var(--bg-primary);
+  padding: 8rem clamp(1.5rem, 6vw, 7rem);
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+}
+
+.header {
+  max-width: 1400px;
+  margin: 0 auto 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.tagline {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-orange);
+  margin: 0 0 1rem;
+}
+
+.heading {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  color: var(--text-primary);
+  text-shadow: 0 0 40px rgba(255, 140, 66, 0.08);
+}
+
+/* List Layout */
+.listContainer {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+/* Card */
+.card {
+  position: relative;
+  width: 100%;
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: clamp(1.6rem, 3vw, 2.5rem);
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* Highlighting custom entries */
+.cardHighlight {
+  border-color: rgba(255, 140, 66, 0.22);
+}
+
+.cardHighlight:hover {
+  border-color: rgba(255, 140, 66, 0.4);
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.6),
+    0 0 25px rgba(255, 140, 66, 0.03);
+}
+
+/* Header inside Card */
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.period {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent-orange);
+  letter-spacing: 0.08em;
+  text-shadow: 0 0 10px rgba(255, 140, 66, 0.12);
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.3rem 0.65rem;
+}
+
+.cardHighlight .badge {
+  color: var(--accent-orange);
+  background: rgba(255, 140, 66, 0.05);
+  border-color: rgba(255, 140, 66, 0.15);
+}
+
+/* Card Body */
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.role {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  line-height: 1.2;
+  font-weight: 900;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.org {
+  font-family: var(--font-mono);
+  font-size: clamp(0.72rem, 1.1vw, 0.8rem);
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin: 0 0 0.6rem;
+}
+
+.cardHighlight .org {
+  color: var(--accent-orange);
+}
+
+.description {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.location {
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: normal;
+  margin-left: 0.35rem;
+}
+
+.bulletsList {
+  list-style: none;
+  padding: 0;
+  margin: 1.4rem 0 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.bulletItem {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+}
+
+.bulletDot {
+  color: var(--accent-orange);
+  font-size: 1rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+  text-shadow: 0 0 5px rgba(255, 140, 66, 0.4);
+}
+
+.bulletText {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.skillsTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.4rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1.2rem;
+}
+
+.skillTag {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  padding: 0.35rem 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.25s ease;
+}
+
+.skillTag:hover {
+  color: var(--accent-orange);
+  border-color: rgba(255, 140, 66, 0.25);
+  background: rgba(255, 140, 66, 0.04);
+  box-shadow: 0 0 10px rgba(255, 140, 66, 0.02);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .cardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .timelineSection {
+    padding: 6rem 1.5rem;
+  }
+
+  .listContainer {
+    gap: 2rem;
+  }
+
+  .card {
+    padding: 1.6rem 1.2rem;
+  }
+}
