@@ -24,14 +24,14 @@ const SoundOffIcon = () => (
 // ── Component ──────────────────────────────────────────────────
 export default function VideoIntro({ onVideoEnded }: { onVideoEnded?: () => void }) {
   const mainVideoRef = useRef<HTMLVideoElement>(null);
-  const ambientRef   = useRef<HTMLVideoElement>(null);
+  const ambientRef = useRef<HTMLVideoElement>(null);
   const nextSectionRef = useRef<HTMLDivElement>(null);
 
-  const taglineRef       = useRef<HTMLParagraphElement>(null);
-  const firstNameRef     = useRef<HTMLSpanElement>(null);
-  const lastNameRef      = useRef<HTMLSpanElement>(null);
-  const dividerRef       = useRef<HTMLDivElement>(null);
-  const roleRef          = useRef<HTMLParagraphElement>(null);
+  const taglineRef = useRef<HTMLParagraphElement>(null);
+  const firstNameRef = useRef<HTMLSpanElement>(null);
+  const lastNameRef = useRef<HTMLSpanElement>(null);
+  const dividerRef = useRef<HTMLDivElement>(null);
+  const roleRef = useRef<HTMLParagraphElement>(null);
   const scrollIndicatorRef = useRef<HTMLDivElement>(null);
 
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -56,7 +56,7 @@ export default function VideoIntro({ onVideoEnded }: { onVideoEnded?: () => void
         .catch(() => {
           // If autoplay still fails, wait for a user gesture via the section click
         });
-      a.play().catch(() => {});
+      a.play().catch(() => { });
     }, 300);
 
     return () => clearTimeout(playTimer);
@@ -74,23 +74,23 @@ export default function VideoIntro({ onVideoEnded }: { onVideoEnded?: () => void
         v.muted = false;
         setIsMuted(false);
         // Also kick-start play in case it was blocked
-        if (v.paused) v.play().catch(() => {});
+        if (v.paused) v.play().catch(() => { });
       }
-      window.removeEventListener('click',      unmute);
-      window.removeEventListener('keydown',    unmute);
-      window.removeEventListener('scroll',     unmute);
+      window.removeEventListener('click', unmute);
+      window.removeEventListener('keydown', unmute);
+      window.removeEventListener('scroll', unmute);
       window.removeEventListener('touchstart', unmute);
     };
 
-    window.addEventListener('click',      unmute, { passive: true });
-    window.addEventListener('keydown',    unmute, { passive: true });
-    window.addEventListener('scroll',     unmute, { passive: true });
+    window.addEventListener('click', unmute, { passive: true });
+    window.addEventListener('keydown', unmute, { passive: true });
+    window.addEventListener('scroll', unmute, { passive: true });
     window.addEventListener('touchstart', unmute, { passive: true });
 
     return () => {
-      window.removeEventListener('click',      unmute);
-      window.removeEventListener('keydown',    unmute);
-      window.removeEventListener('scroll',     unmute);
+      window.removeEventListener('click', unmute);
+      window.removeEventListener('keydown', unmute);
+      window.removeEventListener('scroll', unmute);
       window.removeEventListener('touchstart', unmute);
     };
   }, []);
@@ -100,10 +100,10 @@ export default function VideoIntro({ onVideoEnded }: { onVideoEnded?: () => void
     const tl = gsap.timeline({ delay: 0.6 });
 
     tl.to(taglineRef.current, { opacity: 1, y: 0, duration: 1.0, ease: 'power3.out' })
-      .to(firstNameRef.current,  { opacity: 1, y: 0, duration: 1.1, ease: 'power3.out' }, '-=0.5')
-      .to(lastNameRef.current,   { opacity: 1, y: 0, duration: 1.1, ease: 'power3.out' }, '-=0.75')
-      .to(dividerRef.current,    { opacity: 1, scaleX: 1, duration: 0.8, ease: 'power2.out' }, '-=0.5')
-      .to(roleRef.current,       { opacity: 1, y: 0, duration: 1.0, ease: 'power3.out' }, '-=0.4')
+      .to(firstNameRef.current, { opacity: 1, y: 0, duration: 1.1, ease: 'power3.out' }, '-=0.5')
+      .to(lastNameRef.current, { opacity: 1, y: 0, duration: 1.1, ease: 'power3.out' }, '-=0.75')
+      .to(dividerRef.current, { opacity: 1, scaleX: 1, duration: 0.8, ease: 'power2.out' }, '-=0.5')
+      .to(roleRef.current, { opacity: 1, y: 0, duration: 1.0, ease: 'power3.out' }, '-=0.4')
       .to(scrollIndicatorRef.current, { opacity: 1, duration: 1.2, ease: 'power2.out' }, '-=0.2');
 
     return () => { tl.kill(); };
@@ -115,19 +115,19 @@ export default function VideoIntro({ onVideoEnded }: { onVideoEnded?: () => void
     const a = ambientRef.current;
     if (!v || !a) return;
 
-    const onPlay    = () => { a.currentTime = v.currentTime; a.play().catch(() => {}); };
-    const onPause   = () => { a.pause(); };
+    const onPlay = () => { a.currentTime = v.currentTime; a.play().catch(() => { }); };
+    const onPause = () => { a.pause(); };
     const onSeeking = () => { a.currentTime = v.currentTime; };
 
-    v.addEventListener('play',    onPlay);
-    v.addEventListener('pause',   onPause);
+    v.addEventListener('play', onPlay);
+    v.addEventListener('pause', onPause);
     v.addEventListener('seeking', onSeeking);
 
-    if (!v.paused) { a.currentTime = v.currentTime; a.play().catch(() => {}); }
+    if (!v.paused) { a.currentTime = v.currentTime; a.play().catch(() => { }); }
 
     return () => {
-      v.removeEventListener('play',    onPlay);
-      v.removeEventListener('pause',   onPause);
+      v.removeEventListener('play', onPlay);
+      v.removeEventListener('pause', onPause);
       v.removeEventListener('seeking', onSeeking);
     };
   }, []);
@@ -138,7 +138,7 @@ export default function VideoIntro({ onVideoEnded }: { onVideoEnded?: () => void
     const v = mainVideoRef.current;
     if (!v) return;
     // Also kick-start play if it was blocked (mobile tap activates it)
-    if (v.paused) { v.play().catch(() => {}); }
+    if (v.paused) { v.play().catch(() => { }); }
     v.muted = !v.muted;
     setIsMuted(v.muted);
   }, []);
@@ -193,14 +193,14 @@ export default function VideoIntro({ onVideoEnded }: { onVideoEnded?: () => void
 
           <div className={styles.nameGroup}>
             <span ref={firstNameRef} className={styles.firstName}>Rakesh</span>
-            <span ref={lastNameRef}  className={styles.lastName}>Para</span>
+            <span ref={lastNameRef} className={styles.lastName}>Para</span>
           </div>
 
           <div ref={dividerRef} className={styles.divider} />
 
           <p ref={roleRef} className={styles.role}>
             M.Sc. Data Science · GITAM University<br />
-            <span>AI/ML Engineer</span> · Anomaly Detection · Edge AI<br />
+            AI/ML Engineer · Anomaly Detection · Edge AI<br />
             IIT Bombay Research Intern
           </p>
         </div>

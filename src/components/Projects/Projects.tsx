@@ -68,7 +68,7 @@ interface Project {
 const projectsData: Project[] = [
   {
     number: '01',
-    title: 'GESTURE SMART HOME - DL & IOT',
+    title: 'Multi-Modal Deep Learning for Personalized AI Agents in Smart Environments for Elderly Care',
     subtitle: 'Edge AI Platform',
     tagline: 'DEEP LEARNING • IOT • RL',
     description:
@@ -85,7 +85,7 @@ const projectsData: Project[] = [
       label: 'MODEL GESTURE ACCURACY',
       value: '99.93%'
     },
-    githubUrl: 'https://github.com/pararakesh',
+    githubUrl: 'https://github.com/rakeshpara/multi-modal-deep-learning-for-personalized-ai-agents-smart-home',
     // liveUrl: 'https://github.com/pararakesh',
     iconType: 'chip'
   },
@@ -108,7 +108,7 @@ const projectsData: Project[] = [
       label: 'REVENUE MODELED',
       value: '$29.3M'
     },
-    githubUrl: 'https://github.com/pararakesh',
+    githubUrl: 'https://github.com/rakeshpara/qcommerce-analytics-platform',
     //liveUrl: 'https://github.com/pararakesh',
     iconType: 'database'
   },
