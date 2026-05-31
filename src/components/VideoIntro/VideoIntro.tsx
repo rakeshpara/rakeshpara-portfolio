@@ -34,6 +34,8 @@ export default function VideoIntro({ onVideoEnded }: { onVideoEnded?: () => void
   const roleRef          = useRef<HTMLParagraphElement>(null);
   const scrollIndicatorRef = useRef<HTMLDivElement>(null);
 
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
   // Always start muted — the ONLY way to autoplay on mobile
   const [isMuted, setIsMuted] = useState(true);
 
@@ -49,9 +51,11 @@ export default function VideoIntro({ onVideoEnded }: { onVideoEnded?: () => void
 
     // Use a short delay so the browser has time to load enough data
     const playTimer = setTimeout(() => {
-      v.play().catch(() => {
-        // If autoplay still fails, wait for a user gesture via the section click
-      });
+      v.play()
+        .then(() => setVideoLoaded(true))
+        .catch(() => {
+          // If autoplay still fails, wait for a user gesture via the section click
+        });
       a.play().catch(() => {});
     }, 300);
 
@@ -164,13 +168,14 @@ export default function VideoIntro({ onVideoEnded }: { onVideoEnded?: () => void
             because React's muted prop is unreliable across browsers */}
         <video
           ref={mainVideoRef}
-          className={styles.mainVideo}
+          className={`${styles.mainVideo} ${videoLoaded ? styles.loaded : ''}`}
           src="/hero-video.mp4"
           autoPlay
           muted          /* initial HTML attr — required for mobile autoplay */
           playsInline
           loop={false}
           preload="auto"
+          onCanPlay={() => setVideoLoaded(true)}
           onEnded={onVideoEnded}
         />
 
