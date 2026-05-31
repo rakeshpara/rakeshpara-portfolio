@@ -206,14 +206,22 @@ export default function VideoIntro({ onVideoEnded }: { onVideoEnded?: () => void
         </div>
 
         {/* ── Sound Toggle Button (Bottom Right) ── */}
-        <button
-          className={styles.soundToggle}
-          onClick={toggleMute}
-          data-no-transition="true"
-          aria-label={isMuted ? 'Unmute video' : 'Mute video'}
-        >
-          {isMuted ? <SoundOffIcon /> : <SoundOnIcon />}
-        </button>
+        <div className={styles.soundWrapper} data-no-transition="true">
+          {/* Hint label — visible only while muted */}
+          {isMuted && (
+            <span className={styles.soundHint}>
+              Tap speaker for audio
+            </span>
+          )}
+          <button
+            className={styles.soundToggle}
+            onClick={toggleMute}
+            data-no-transition="true"
+            aria-label={isMuted ? 'Unmute video' : 'Mute video'}
+          >
+            {isMuted ? <SoundOffIcon /> : <SoundOnIcon />}
+          </button>
+        </div>
 
         {/* ── Scroll Indicator ── */}
         <div
