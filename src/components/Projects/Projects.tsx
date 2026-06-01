@@ -47,6 +47,15 @@ const ExternalLinkIcon = () => (
   </svg>
 );
 
+const FileTextIcon = () => (
+  <svg className={styles.btnIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+    <polyline points="14 2 14 8 20 8" />
+    <line x1="16" y1="13" x2="8" y2="13" />
+    <line x1="16" y1="17" x2="8" y2="17" />
+  </svg>
+);
+
 interface Project {
   number: string;
   title: string;
@@ -239,12 +248,6 @@ export default function Projects() {
                         </li>
                       ))}
                     </ul>
-
-                    {project.caseStudyUrl && (
-                      <a href={project.caseStudyUrl} className={styles.caseStudyBtn}>
-                        View Case Study →
-                      </a>
-                    )}
                   </div>
 
                   <div className={styles.cardFooter}>
@@ -266,6 +269,11 @@ export default function Projects() {
                   </div>
 
                   <div className={styles.actionBtns}>
+                    {project.caseStudyUrl && (
+                      <a href={project.caseStudyUrl} className={styles.githubBtn}>
+                        <FileTextIcon /> View Case Study →
+                      </a>
+                    )}
                     {project.githubUrl && (
                       <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className={styles.githubBtn}>
                         <GitHubIcon /> GitHub ↗
