@@ -105,7 +105,7 @@ const projectsData: Project[] = [
       'Developed a Streamlit intelligence layer with live Snowflake KPIs, Z-score anomaly detection, and a 3-scenario What-If revenue simulator'
     ],
     tags: ['SNOWFLAKE', 'PYTHON', 'POWER BI', 'STREAMLIT', 'SQL', 'PANDAS', 'SCIPY', 'DAX'],
-    accent: 'blue',
+    accent: 'orange',
     metric: {
       label: 'REVENUE MODELED',
       value: '$29.3M'

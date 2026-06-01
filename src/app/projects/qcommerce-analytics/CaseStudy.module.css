@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════════
    CaseStudy.module.css  —  QCommerce Analytics Case Study
-   Matches portfolio design system: dark cinematic, soft blue
+   Matches portfolio design system: dark cinematic, orange
    ═══════════════════════════════════════════════════════════ */
 
 /* ── Page Shell ── */
@@ -26,20 +26,20 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #7ecbff;
+  color: #ff8c42;
   text-decoration: none;
   background: rgba(10, 10, 10, 0.7);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(126, 203, 255, 0.25);
+  border: 1px solid rgba(255, 140, 66, 0.25);
   border-radius: 100px;
   padding: 0.5rem 1rem;
   transition: all 0.25s ease;
 }
 
 .backBtn:hover {
-  background: rgba(126, 203, 255, 0.1);
-  border-color: rgba(126, 203, 255, 0.5);
+  background: rgba(255, 140, 66, 0.1);
+  border-color: rgba(255, 140, 66, 0.5);
   transform: translateX(-2px);
 }
 
@@ -55,7 +55,7 @@
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #7ecbff;
+  color: #ff8c42;
   margin: 0 0 1.6rem;
 }
 
@@ -98,13 +98,13 @@
 }
 
 .metricPill:hover {
-  border-color: rgba(126, 203, 255, 0.25);
+  border-color: rgba(255, 140, 66, 0.25);
 }
 
 .metricNum {
   font-size: 1.7rem;
   font-weight: 700;
-  color: #7ecbff;
+  color: #ff8c42;
   letter-spacing: -0.02em;
   line-height: 1;
 }
@@ -137,7 +137,7 @@
 .heroDivider {
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, #7ecbff 0%, rgba(126, 203, 255, 0.15) 40%, transparent 100%);
+  background: linear-gradient(90deg, #ff8c42 0%, rgba(255, 140, 66, 0.15) 40%, transparent 100%);
   margin-bottom: 0;
 }
 
@@ -187,7 +187,7 @@
 
 .navTabActive {
   color: #ffffff;
-  border-bottom-color: #7ecbff;
+  border-bottom-color: #ff8c42;
 }
 
 /* ── Content area ── */
@@ -208,7 +208,7 @@
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #7ecbff;
+  color: #ff8c42;
   margin: 0 0 1.2rem;
 }
 
@@ -232,10 +232,10 @@
 
 /* ── Quote Block ── */
 .quoteBlock {
-  border-left: 3px solid #7ecbff;
+  border-left: 3px solid #ff8c42;
   padding: 1.2rem 1.8rem;
   margin: 2rem 0;
-  background: rgba(126, 203, 255, 0.03);
+  background: rgba(255, 140, 66, 0.03);
   border-radius: 0 6px 6px 0;
 }
 
@@ -268,7 +268,7 @@
 
 .objCard:hover {
   transform: translateY(-4px);
-  border-color: rgba(126, 203, 255, 0.25);
+  border-color: rgba(255, 140, 66, 0.25);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -280,7 +280,7 @@
 .objNum {
   font-size: 1.8rem;
   font-weight: 700;
-  color: rgba(126, 203, 255, 0.3);
+  color: rgba(255, 140, 66, 0.3);
   letter-spacing: -0.03em;
   line-height: 1;
   margin: 0 0 1rem;
@@ -354,8 +354,8 @@
 
 .priorSummary {
   grid-column: 1 / -1;
-  border-left: 3px solid #7ecbff;
-  background: rgba(126, 203, 255, 0.03);
+  border-left: 3px solid #ff8c42;
+  background: rgba(255, 140, 66, 0.03);
   border-radius: 0 8px 8px 0;
   padding: 1.4rem 1.8rem;
 }
@@ -369,7 +369,7 @@
 
 /* ── Sub-sections (What I Built) ── */
 .subSection {
-  border-left: 3px solid rgba(126, 203, 255, 0.4);
+  border-left: 3px solid rgba(255, 140, 66, 0.4);
   padding-left: 2rem;
   margin: 3rem 0;
 }
@@ -387,9 +387,9 @@
   display: inline-block;
   font-size: 0.72rem;
   font-weight: 700;
-  color: #7ecbff;
-  background: rgba(126, 203, 255, 0.06);
-  border: 1px solid rgba(126, 203, 255, 0.2);
+  color: #ff8c42;
+  background: rgba(255, 140, 66, 0.06);
+  border: 1px solid rgba(255, 140, 66, 0.2);
   border-radius: 6px;
   padding: 0.6rem 1.1rem;
   margin: 1rem 0;
@@ -422,8 +422,8 @@
 }
 
 .modelTable tr.selected td {
-  color: #7ecbff;
-  background: rgba(126, 203, 255, 0.05);
+  color: #ff8c42;
+  background: rgba(255, 140, 66, 0.05);
   font-weight: 700;
 }
 
@@ -448,7 +448,7 @@
   font-family: 'Space Mono', monospace;
   font-size: clamp(0.68rem, 1.4vw, 0.82rem);
   line-height: 1.5;
-  color: #7ecbff;
+  color: #ff8c42;
   margin: 0;
   white-space: pre;
 }
@@ -470,7 +470,7 @@
 
 .flowNode {
   background: rgba(13, 13, 13, 0.8);
-  border: 1px solid rgba(126, 203, 255, 0.15);
+  border: 1px solid rgba(255, 140, 66, 0.15);
   border-radius: 6px;
   padding: 0.8rem 1.2rem;
   text-align: center;
@@ -480,9 +480,9 @@
 }
 
 .flowNode:hover {
-  border-color: rgba(126, 203, 255, 0.4);
+  border-color: rgba(255, 140, 66, 0.4);
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(126, 203, 255, 0.1);
+  box-shadow: 0 6px 15px rgba(255, 140, 66, 0.1);
 }
 
 .flowTitle {
@@ -500,7 +500,7 @@
 }
 
 .flowArrow {
-  color: #7ecbff;
+  color: #ff8c42;
   font-size: 1.2rem;
   font-weight: 700;
   user-select: none;
@@ -523,14 +523,14 @@
 }
 
 .dashboardCard:hover {
-  border-color: rgba(126, 203, 255, 0.25);
+  border-color: rgba(255, 140, 66, 0.25);
   transform: translateY(-3px);
 }
 
 .dashboardTitle {
   font-size: 0.78rem;
   font-weight: 700;
-  color: #7ecbff;
+  color: #ff8c42;
   letter-spacing: 0.04em;
   margin: 0 0 0.6rem;
 }
@@ -610,14 +610,14 @@
 }
 
 .outcomeCard:hover {
-  border-color: rgba(126, 203, 255, 0.3);
+  border-color: rgba(255, 140, 66, 0.3);
   transform: translateY(-3px);
 }
 
 .outcomeValue {
   font-size: 2rem;
   font-weight: 700;
-  color: #7ecbff;
+  color: #ff8c42;
   letter-spacing: -0.02em;
   line-height: 1;
 }
@@ -642,7 +642,7 @@
   text-decoration: none;
   color: #ffffff;
   background: rgba(13, 13, 13, 0.55);
-  border: 1px solid rgba(126, 203, 255, 0.3);
+  border: 1px solid rgba(255, 140, 66, 0.3);
   border-radius: 6px;
   padding: 0.9rem 1.8rem;
   transition: all 0.3s ease;
@@ -651,9 +651,9 @@
 }
 
 .ghBtn:hover {
-  border-color: rgba(126, 203, 255, 0.6);
-  background: rgba(126, 203, 255, 0.08);
-  box-shadow: 0 0 15px rgba(126, 203, 255, 0.15);
+  border-color: rgba(255, 140, 66, 0.6);
+  background: rgba(255, 140, 66, 0.08);
+  box-shadow: 0 0 15px rgba(255, 140, 66, 0.15);
 }
 
 .ghBtnWrap {
@@ -685,7 +685,7 @@
 }
 
 .footerLink:hover {
-  color: #7ecbff;
+  color: #ff8c42;
 }
 
 .footerLinkRight {
