@@ -116,25 +116,25 @@ const projectsData: Project[] = [
   },
   {
     number: '03',
-    title: 'HANDWRITTEN DIGIT RECOGNIZER - CNN',
-    subtitle: 'Deep Learning Deployment',
-    tagline: 'COMPUTER VISION • CNN',
+    title: 'Handwritten Digit Recognizer with Real-Time GUI',
+    subtitle: 'Mini Project · GITAM University · 2025',
+    badge: 'Mini Project · GITAM University · 2025',
+    tagline: 'COMPUTER VISION · CNN · REAL-TIME DEPLOYMENT',
     description:
-      'Developed a full model-to-application deep learning deployment demonstrating convolutional neural network design and real-time user-drawn image preprocessors.',
+      'Full model-to-application deep learning deployment — CNN trained on MNIST to 99.17% accuracy, deployed inside a live Tkinter desktop interface where users draw digits and get instant predictions.',
     bullets: [
-      'Constructed a custom CNN architecture using TensorFlow and Keras, employing alternating Conv2D filters, MaxPool pooling layers, and Dropout regularization, achieving 99.17% test accuracy on the MNIST dataset.',
-      'Engineered an OpenCV drawing preprocessor that captures desktop canvas inputs, applying grayscale inversion, noise threshold limits (cutoff < 30), and proportional thumbnail resizing.',
-      'Centered the output canvas in a 28x28 bounding box to match MNIST parameters, resolving prediction drift issues when users draw off-center characters.',
-      'Deployed the model inside a Tkinter-based desktop interface to display prediction probabilities and draw confidence indicators in real time.'
+      'Built a custom CNN in TensorFlow/Keras achieving 99.17% test accuracy on 10,000 unseen MNIST images across 10 epochs',
+      'Engineered a real-time preprocessing pipeline — grayscale inversion, noise thresholding, bounding box crop, proportional resize, 28×28 centering — bridging the gap between free-hand drawings and MNIST format',
+      'Deployed the trained model inside a Tkinter desktop GUI with live canvas drawing, instant prediction, and confidence score display'
     ],
-    tags: ['TENSORFLOW', 'KERAS', 'OPENCV', 'TKINTER GUI', 'NUMPY', 'GRAYSCALE INVERSION'],
+    tags: ['TENSORFLOW', 'KERAS', 'CNN', 'TKINTER', 'NUMPY', 'PILLOW', 'PYTHON'],
     accent: 'orange',
     metric: {
       label: 'MNIST TEST ACCURACY',
       value: '99.17%'
     },
     githubUrl: 'https://github.com/pararakesh',
-    // liveUrl: 'https://github.com/pararakesh',
+    caseStudyUrl: '/projects/digit-recognizer',
     iconType: 'brain'
   }
 ];
