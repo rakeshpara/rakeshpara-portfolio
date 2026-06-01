@@ -51,6 +51,7 @@ interface Project {
   number: string;
   title: string;
   subtitle: string;
+  badge?: string;
   tagline: string;
   description: string;
   bullets: string[];
@@ -62,31 +63,32 @@ interface Project {
   };
   githubUrl?: string;
   liveUrl?: string;
+  caseStudyUrl?: string;
   iconType: 'chip' | 'database' | 'brain';
 }
 
 const projectsData: Project[] = [
   {
     number: '01',
-    title: 'Multi-Modal Deep Learning for Personalized AI Agents in Smart Environments for Elderly Care',
-    subtitle: 'Edge AI Platform',
-    tagline: 'DEEP LEARNING • IOT • RL',
+    title: 'Multi-Modal Deep Learning for Elderly Smart Home Control',
+    subtitle: 'Research · GITAM University · 2026',
+    badge: 'Research · GITAM University · 2026',
+    tagline: 'DEEP LEARNING · IoT · REINFORCEMENT LEARNING',
     description:
-      'Co-led the research and implementation of an edge-deployed artificial intelligence platform aimed at assisting elderly and mobility-impaired individuals with voice-free, offline home appliance control.',
+      'Offline gesture-based home control system — no internet, no wearables, no voice required. Built for elderly users with mobility and speech impairments.',
     bullets: [
-      'Engineered a MediaPipe preprocessing pipeline extracting 21 hand landmarks and applying a 20% padded bounding box crop, raising EfficientNetB0 classification accuracy from 72.5% to 98% with zero changes to model weights.',
-      'Trained and evaluated five CNN architectures, selecting DenseNet121 (99.92% test accuracy, perfect F1-score) for final deployment on a Raspberry Pi 4 due to its dense connectivity that maximizes fine-grained finger curvature feature reuse.',
-      'Designed a Q-learning agent with a 128-state discrete space (gesture state, PIR sensor value, temperature, proximity boundaries) using Bellman equation updates to learn personalized, energy-efficient device behaviors over time.',
-      'Programmed an ESP32 microcontroller in C (Arduino) to poll ultrasonic (HC-SR04), motion (PIR HC-SR501), and temperature (DHT11) sensors, handling real-time appliance switching via multi-channel relay modules.'
+      'Designed a custom CNN + MediaPipe preprocessing pipeline for 4 gestures, improving accuracy from 72.5% to 99.92%.',
+      'Evaluated 5 models (VGG16, MobileNets, EfficientNet, DenseNet121) selecting DenseNet121 for edge deployment.',
+      'Integrated Q-learning agent (128 discrete states) for personalized IoT actuation via ESP32 microcontrollers.'
     ],
-    tags: ['DENSENET121', 'MEDIAPIPE LANDMARKS', 'Q-LEARNING (RL)', 'RASPBERRY PI 4', 'ESP32 NODE', 'TENSORFLOW/KERAS', 'OPENCV'],
+    tags: ['DENSENET121', 'MEDIAPIPE', 'Q-LEARNING', 'RASPBERRY PI 4', 'ESP32', 'TENSORFLOW', 'OPENCV'],
     accent: 'orange',
     metric: {
-      label: 'MODEL GESTURE ACCURACY',
-      value: '99.93%'
+      label: 'GESTURE ACCURACY',
+      value: '99.92%'
     },
     githubUrl: 'https://github.com/rakeshpara/multi-modal-deep-learning-for-personalized-ai-agents-smart-home',
-    // liveUrl: 'https://github.com/pararakesh',
+    caseStudyUrl: '/projects/gesture-smart-home',
     iconType: 'chip'
   },
   {
@@ -226,7 +228,7 @@ export default function Projects() {
 
                   <div className={styles.cardBody}>
                     <h3 className={styles.projectTitle}>{project.title}</h3>
-                    <h4 className={styles.projectSubtitle}>{project.subtitle}</h4>
+                    <h4 className={styles.projectSubtitle}>{project.badge || project.subtitle}</h4>
                     <p className={styles.description}>{project.description}</p>
 
                     <ul className={styles.bulletsList}>
@@ -237,6 +239,12 @@ export default function Projects() {
                         </li>
                       ))}
                     </ul>
+
+                    {project.caseStudyUrl && (
+                      <a href={project.caseStudyUrl} className={styles.caseStudyBtn}>
+                        View Case Study →
+                      </a>
+                    )}
                   </div>
 
                   <div className={styles.cardFooter}>
@@ -258,6 +266,11 @@ export default function Projects() {
                   </div>
 
                   <div className={styles.actionBtns}>
+                    {project.caseStudyUrl && (
+                      <a href={project.caseStudyUrl} className={styles.liveBtn}>
+                        VIEW CASE STUDY →
+                      </a>
+                    )}
                     {project.githubUrl && (
                       <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className={styles.githubBtn}>
                         <GitHubIcon /> BROWSE SOURCE

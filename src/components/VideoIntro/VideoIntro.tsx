@@ -210,7 +210,7 @@ export default function VideoIntro({ onVideoEnded }: { onVideoEnded?: () => void
           {/* Hint label — visible only while muted */}
           {isMuted && (
             <span className={styles.soundHint}>
-              Tap speaker for audio
+              Click or tap speaker once or twice for audio
             </span>
           )}
           <button
