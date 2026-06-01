@@ -266,14 +266,9 @@ export default function Projects() {
                   </div>
 
                   <div className={styles.actionBtns}>
-                    {project.caseStudyUrl && (
-                      <a href={project.caseStudyUrl} className={styles.liveBtn}>
-                        VIEW CASE STUDY →
-                      </a>
-                    )}
                     {project.githubUrl && (
                       <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className={styles.githubBtn}>
-                        <GitHubIcon /> BROWSE SOURCE
+                        <GitHubIcon /> GitHub ↗
                       </a>
                     )}
                     {project.liveUrl && (
