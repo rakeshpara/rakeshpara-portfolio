@@ -439,3 +439,38 @@
   }
 }
 
+/* ── Blue Accent Overrides ── */
+.accentBlue .bulletDot {
+  color: var(--accent-blue);
+  text-shadow: 0 0 5px rgba(126, 203, 255, 0.4);
+}
+
+.accentBlue .metricCard {
+  box-shadow: inset 0 0 15px rgba(126, 203, 255, 0.02);
+}
+
+.accentBlue .chipIcon {
+  color: var(--accent-blue);
+  filter: drop-shadow(0 0 4px rgba(126, 203, 255, 0.4));
+}
+
+.accentBlue .caseStudyBtn {
+  color: var(--accent-blue);
+}
+
+.accentOrange .caseStudyBtn {
+  color: var(--accent-orange);
+}
+
+.accentBlue .liveBtn {
+  background: var(--accent-blue);
+  color: #040404;
+  box-shadow: 0 4px 15px rgba(126, 203, 255, 0.25);
+}
+
+.accentBlue .liveBtn:hover {
+  background: #ffffff;
+  color: #040404;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
+}
+

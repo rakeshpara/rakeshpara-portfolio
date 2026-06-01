@@ -93,25 +93,25 @@ const projectsData: Project[] = [
   },
   {
     number: '02',
-    title: 'QCOMMERCE ANALYTICS INTELLIGENCE PLATFORM',
-    subtitle: 'Business Intelligence & Data Warehousing',
-    tagline: 'DATA WAREHOUSING • BI • ETL',
+    title: 'QCommerce Analytics Intelligence Platform',
+    subtitle: 'Personal Project · Data Engineering · 2025',
+    badge: 'Personal Project · Data Engineering · 2025',
+    tagline: 'DATA WAREHOUSING · BUSINESS INTELLIGENCE · ETL',
     description:
-      'Architected an end-to-end data engineering and business intelligence platform simulating a high-throughput quick-commerce ecosystem processing 60,382 orders, 18,479 customers, and $29.3M in revenue.',
+      'End-to-end data engineering and BI platform simulating a Blinkit/Zepto-style quick commerce ecosystem — built entirely from scratch for personal learning and portfolio depth.',
     bullets: [
-      'Designed a Constellation Schema data warehouse on Snowflake (AWS) featuring two fact tables (FACT_ORDERS and FACT_INVENTORY, totaling 397,884 records) and four dimensions, optimized via six SQL analytical Views.',
-      'Created a three-phase Python ETL pipeline utilizing Pandas and openpyxl to clean, transform, and load raw source spreadsheets into Snowflake schemas.',
-      'Developed a 4-page Power BI executive dashboard driven by DAX queries, visualizing delivery performance metrics, stocking risks, and customer segmentation patterns.',
-      'Constructed a Streamlit web portal querying Snowflake live KPIs, using SciPy Z-score limits (threshold = 2.0) to auto-flag inventory stockout risks and revenue anomalies, and built a scenario-based What-If Simulator.'
+      'Architected a Constellation Schema on Snowflake (AWS) processing 60,382 orders, 397,884 inventory records, and $29.3M in modeled revenue',
+      'Built a 3-phase Python ETL pipeline and 6 SQL analytical views feeding a 4-page Power BI executive dashboard with DAX queries',
+      'Developed a Streamlit intelligence layer with live Snowflake KPIs, Z-score anomaly detection, and a 3-scenario What-If revenue simulator'
     ],
-    tags: ['SNOWFLAKE (AWS)', 'PYTHON', 'SQL VIEWS', 'POWER BI (DAX)', 'STREAMLIT FRAMEWORK', 'SCIPY Z-SCORE', 'OPENPYXL'],
+    tags: ['SNOWFLAKE', 'PYTHON', 'POWER BI', 'STREAMLIT', 'SQL', 'PANDAS', 'SCIPY', 'DAX'],
     accent: 'blue',
     metric: {
       label: 'REVENUE MODELED',
       value: '$29.3M'
     },
     githubUrl: 'https://github.com/rakeshpara/qcommerce-analytics-platform',
-    //liveUrl: 'https://github.com/pararakesh',
+    caseStudyUrl: '/projects/qcommerce-analytics',
     iconType: 'database'
   },
   {
